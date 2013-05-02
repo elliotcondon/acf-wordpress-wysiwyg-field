@@ -25,16 +25,20 @@ This add-on can be treated as both a WP plugin and a theme include.
 
 **Install as Plugin**
 
-1. Copy the 'acf-wp_wysiwyg' folder into your plugins folder
-2. Activate the plugin via the Plugins admin page
+1. Download .zip
+2. Extract .zip and rename folder to 'acf-wp-wysiwyg'
+3. Copy the 'acf-wp-wysiwyg' folder into your plugins folder
+4. Activate the plugin via the Plugins admin page
 
 **Include within theme**
 
-1.	Copy the 'acf-wp_wysiwyg' folder into your theme folder (can use sub folders). You can place the folder anywhere inside the 'wp-content' directory
-2.	Edit your functions.php file and add the code below (Make sure the path is correct to include the acf-wp_wysiwyg.php file)
+1. Download .zip
+2. Extract .zip and rename folder to 'acf-wp-wysiwyg'
+3.	Copy the 'acf-wp-wysiwyg' folder into your theme folder (can use sub folders). You can place the folder anywhere inside the 'wp-content' directory
+4.	Edit your functions.php file and add the code below (Make sure the path is correct to include the acf-wp-wysiwyg.php file)
 
 ```php
-include_once('acf-wp_wysiwyg/acf-wp_wysiwyg.php');
+include_once('acf-wp-wysiwyg/acf-wp_wysiwyg.php');
 ```
 
 ### More Information
