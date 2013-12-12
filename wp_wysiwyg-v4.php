@@ -20,7 +20,7 @@ class acf_field_wp_wysiwyg extends acf_field
 	{
 		// vars
 		$this->name = 'wp_wysiwyg';
-		$this->label = __('WP WYSIWYG');
+		$this->label = __('Wysiwyg Editor (WordPress)');
 		$this->category = __("Content",'acf'); // Basic, Content, Choice, etc
 		$this->defaults = array(
 			// add default here to merge into your field. 
@@ -196,21 +196,12 @@ class acf_field_wp_wysiwyg extends acf_field
 	
 	function format_value_for_api( $value, $post_id, $field )
 	{
-		// wp_embed convert urls to videos
-		if(	isset($GLOBALS['wp_embed']) )
-		{
-			$embed = $GLOBALS['wp_embed'];
-            $value = $embed->run_shortcode( $value );
-            $value = $embed->autoembed( $value );
-		}
+		// apply filters
+		$value = apply_filters( 'acf_the_content', $value );
 		
 		
-		// auto p
-		$value = wpautop( $value );
-		
-		
-		// run all normal shortcodes
-		$value = do_shortcode( $value );
+		// follow the_content function in /wp-includes/post-template.php
+		$value = str_replace(']]>', ']]&gt;', $value);
 		
 	
 		return $value;

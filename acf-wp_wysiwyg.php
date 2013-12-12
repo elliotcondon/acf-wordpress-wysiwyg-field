@@ -1,9 +1,9 @@
 <?php
 /*
 Plugin Name: Advanced Custom Fields: WP WYSIWYG
-Plugin URI: {{git_url}}
+Plugin URI: https://github.com/elliotcondon/acf-wordpress-wysiwyg-field
 Description: Adds a native WordPress WYSIWYG field to the Advanced Custom Fields plugin. Please note this field does not work as a sub field.
-Version: 1.0.0
+Version: 1.0.1
 Author: Elliot Condon
 Author URI: http://www.elliotcondon.com
 License: GPLv2 or later
