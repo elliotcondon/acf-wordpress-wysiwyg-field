@@ -194,22 +194,12 @@ class acf_field_wp_wysiwyg extends acf_Field
 		// get value
 		$value = parent::get_value($post_id, $field);
 		
-		// format value
-		// wp_embed convert urls to videos
-		if(	isset($GLOBALS['wp_embed']) )
-		{
-			$embed = $GLOBALS['wp_embed'];
-            $value = $embed->run_shortcode( $value );
-            $value = $embed->autoembed( $value );
-		}
+		// apply filters
+		$value = apply_filters( 'acf_the_content', $value );
 		
 		
-		// auto p
-		$value = wpautop( $value );
-		
-		
-		// run all normal shortcodes
-		$value = do_shortcode( $value );
+		// follow the_content function in /wp-includes/post-template.php
+		$value = str_replace(']]>', ']]&gt;', $value);
 		
 	
 		return $value;
