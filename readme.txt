@@ -19,8 +19,9 @@ This field uses the native wp_editor function which creates a very native lookin
 
 This add-on will work with:
 
-* version 4 and up
-* version 3 and bellow
+* version 5
+* version 4
+* version 3
 
 == Installation ==
 
@@ -45,6 +46,12 @@ include_once('acf-wp_wysiwyg/acf-wp_wysiwyg.php');
 `
 
 == Changelog ==
+
+= 1.0.2 =
+* Added ACF5 compatibility.
+
+= 1.0.1 =
+* Added ACF4 compatibility.
 
 = 1.0.0 =
 * Initial Release.

@@ -15,8 +15,9 @@ This field uses the native wp_editor function which creates a very native lookin
 
 This add-on will work with:
 
-* version 4 and up
-* version 3 and bellow
+* version 5
+* version 4
+* version 3
 
 
 ### Installation
